@@ -1,0 +1,37 @@
+var count=0;
+function cardCounting(card){
+  switch(card){
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    //console.log("Bet");
+    count = count + 1;
+    console.log(count + " Bet");
+    return count;
+    //return count + "Bet";
+    break;
+    
+    case 7:
+    case 8:
+    case 9:
+    //console.log("Hold");
+    count = count + 0;
+    console.log(count + " Hold");
+    return count;
+    break;
+      
+    case 10:
+    case 'J':
+    case 'Q':
+    case 'K':
+    case 'A':
+    //console.log("Hold");
+    count = count - 1;
+    console.log(count + " Hold");
+    return count;
+    break;
+             }
+}
+cardCounting(2);cardCounting('J');cardCounting('A');cardCounting('K');
